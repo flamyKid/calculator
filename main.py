@@ -17,7 +17,7 @@ class MainWin(QtWidgets.QMainWindow):
         self.text = ''  # текст в строковом значении для вывода
 
         self.setWindowTitle('Calculator')
-        self.setWindowIcon(QtGui.QIcon('image.jpg'))
+        self.setWindowIcon(QtGui.QIcon('image/image.jpg'))
 
         # если не удалять, то будет баг
         self.delete_all()
