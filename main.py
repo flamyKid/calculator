@@ -11,10 +11,10 @@ class MainWin(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        self.text_list = []
-        self.sign_operation = ''
-        self.operation = None
-        self.text = ''
+        self.text_list = []  # нужен для удаления чисел
+        self.sign_operation = ''  # 
+        self.operation = None  # принимает функцию с операциями
+        self.text = ''  # текст в строковом значении для вывода
 
         self.setWindowTitle('Calculator')
         self.setWindowIcon(QtGui.QIcon('image.jpg'))
