@@ -7,4 +7,4 @@ Today is June 21, 2020.
 
 If you want to transfer it with a picture to your desktop, make it a shortcut, and the shortcut put a picture.
 
-![calculator view](calculator_image.jpg)
+![calculator view](image/calculator_image.jpg)
