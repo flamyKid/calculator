@@ -6,3 +6,5 @@ It took 5 hours (if you count hours in a row) and here it is.
 Today is June 21, 2020.
 
 If you want to transfer it with a picture to your desktop, make it a shortcut, and the shortcut put a picture.
+
+![calculator view](calculator_image.png)
