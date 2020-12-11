@@ -11,10 +11,10 @@ class MainWin(QtWidgets.QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        self.text_list = []  # нужен для удаления чисел
-        self.sign_operation = ''  # 
-        self.operation = None  # принимает функцию с операциями
-        self.text = ''  # текст в строковом значении для вывода
+        self.text_list = []
+        self.sign_operation = ''
+        self.operation = None
+        self.text = ''
 
         self.setWindowTitle('Calculator')
         self.setWindowIcon(QtGui.QIcon('image/image.jpg'))
@@ -80,9 +80,9 @@ class MainWin(QtWidgets.QMainWindow):
 
     def radical(self):
         self.operation = self.rad
-        self.sign_operation = '√‎'
-        self.text_list.append('√‎')
-        self.text += '√‎'
+        self.sign_operation = '√'
+        self.text_list.append('√')
+        self.text += '√'
         self.ui.res_line.setText(self.text)
 
     def power(self):
@@ -94,9 +94,9 @@ class MainWin(QtWidgets.QMainWindow):
 
     def factorial(self):
         self.operation = self.fac
-        self.sign_operation = '!‎'
-        self.text_list.append('!‎')
-        self.text += '!‎'
+        self.sign_operation = '!'
+        self.text_list.append('!')
+        self.text += '!'
         self.ui.res_line.setText(self.text)
 
     def addiction(self):
@@ -154,6 +154,7 @@ class MainWin(QtWidgets.QMainWindow):
             self.text += i
         num1, num2 = self.text.rsplit(self.sign_operation)
         self.text = self.operation(num1, num2)
+        self.text_list = [str(self.text)]  # для того, что бы выполнять операции с ответом
         self.ui.res_line.setText(self.text)
 
 
