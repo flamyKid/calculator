@@ -1,7 +1,7 @@
 import sys
 import math
 from PyQt5 import QtWidgets, QtGui
-from calculator import Ui_MainWindow
+from gui import Ui_MainWindow
 
 
 class MainWin(QtWidgets.QMainWindow):
