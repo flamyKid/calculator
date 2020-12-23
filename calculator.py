@@ -5,7 +5,6 @@ from gui import Ui_MainWindow
 
 
 class MainWin(QtWidgets.QMainWindow):
-    # конструктор
     def __init__(self):
         super(MainWin, self).__init__()
         self.ui = Ui_MainWindow()
