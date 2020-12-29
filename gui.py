@@ -1,19 +1,19 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(320, 480)
+class Window(object):
+    def setup_ui(self, window):
+        window.setObjectName("Calculator")
+        window.resize(320, 480)
 
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget = QtWidgets.QWidget(window)
         self.centralwidget.setObjectName("centralwidget")
-        MainWindow.setCentralWidget(self.centralwidget)
+        window.setCentralWidget(self.centralwidget)
 
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar = QtWidgets.QMenuBar(window)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 321, 21))
         self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
+        window.setMenuBar(self.menubar)
 
         self.result_line = QtWidgets.QLineEdit(self.centralwidget)
         self.result_line.setGeometry(QtCore.QRect(4, 5, 312, 51))
@@ -111,36 +111,35 @@ class Ui_MainWindow(object):
         self.result.setStyleSheet("font: 75 10pt \"M" "S Shell Dlg 2\";\n" "background-color: rgb(85, 170, 255);")
         self.result.setObjectName("result")
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.translate_ui(window)
+        QtCore.QMetaObject.connectSlotsByName(window)
 
-    def retranslateUi(self, MainWindow):
+    def translate_ui(self, window):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        MainWindow.setWindowTitle('Calculator')
-        MainWindow.setWindowIcon(QtGui.QIcon('image/logo.jpg'))
+        window.setWindowTitle(_translate("Calculator", "Calculator"))
+        window.setWindowIcon(QtGui.QIcon('image/logo.jpg'))
 
-        self.zero.setText(_translate("MainWindow", "0"))
-        self.one.setText(_translate("MainWindow", "1"))
-        self.two.setText(_translate("MainWindow", "2"))
-        self.three.setText(_translate("MainWindow", "3"))
-        self.four.setText(_translate("MainWindow", "4"))
-        self.five.setText(_translate("MainWindow", "5"))
-        self.six.setText(_translate("MainWindow", "6"))
-        self.seven.setText(_translate("MainWindow", "7"))
-        self.eight.setText(_translate("MainWindow", "8"))
-        self.nine.setText(_translate("MainWindow", "9"))
+        self.zero.setText(_translate("Calculator", "0"))
+        self.one.setText(_translate("Calculator", "1"))
+        self.two.setText(_translate("Calculator", "2"))
+        self.three.setText(_translate("Calculator", "3"))
+        self.four.setText(_translate("Calculator", "4"))
+        self.five.setText(_translate("Calculator", "5"))
+        self.six.setText(_translate("Calculator", "6"))
+        self.seven.setText(_translate("Calculator", "7"))
+        self.eight.setText(_translate("Calculator", "8"))
+        self.nine.setText(_translate("Calculator", "9"))
 
-        self.addition.setText(_translate("MainWindow", "+"))
-        self.subtraction.setText(_translate("MainWindow", "-"))
-        self.multiply.setText(_translate("MainWindow", "*"))
-        self.division.setText(_translate("MainWindow", "/"))
-        self.radical.setText(_translate("MainWindow", "√"))
-        self.power.setText(_translate("MainWindow", "^"))
-        self.factorial.setText(_translate("MainWindow", "n!"))
+        self.addition.setText(_translate("Calculator", "+"))
+        self.subtraction.setText(_translate("Calculator", "-"))
+        self.multiply.setText(_translate("Calculator", "*"))
+        self.division.setText(_translate("Calculator", "/"))
+        self.radical.setText(_translate("Calculator", "√"))
+        self.power.setText(_translate("Calculator", "^"))
+        self.factorial.setText(_translate("Calculator", "n!"))
 
-        self.num_sign.setText(_translate("MainWindow", "+/-"))
-        self.point.setText(_translate("MainWindow", "."))
-        self.delete_last.setText(_translate("MainWindow", "<="))
-        self.delete_all.setText(_translate("MainWindow", "C"))
-        self.result.setText(_translate("MainWindow", "="))
+        self.num_sign.setText(_translate("Calculator", "+/-"))
+        self.point.setText(_translate("Calculator", "."))
+        self.delete_last.setText(_translate("Calculator", "<="))
+        self.delete_all.setText(_translate("Calculator", "C"))
+        self.result.setText(_translate("Calculator", "="))

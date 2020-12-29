@@ -1,14 +1,14 @@
 import sys
 import math
 from PyQt5 import QtWidgets
-from gui import Ui_MainWindow
+from gui import Window
 
 
-class MainWin(QtWidgets.QMainWindow):
+class Calculator(QtWidgets.QMainWindow):
     def __init__(self):
-        super(MainWin, self).__init__()
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi(self)
+        super(Calculator, self).__init__()
+        self.ui = Window()
+        self.ui.setup_ui(self)
 
         self.text_list = []
         self.sign_operation = ''
@@ -150,6 +150,6 @@ class MainWin(QtWidgets.QMainWindow):
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])
-    win = MainWin()
-    win.show()
+    window = Calculator()
+    window.show()
     sys.exit(app.exec())
