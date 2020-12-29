@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(321, 491)
+        MainWindow.resize(320, 480)
 
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -16,7 +16,7 @@ class Ui_MainWindow(object):
         MainWindow.setMenuBar(self.menubar)
 
         self.result_line = QtWidgets.QLineEdit(self.centralwidget)
-        self.result_line.setGeometry(QtCore.QRect(5, 5, 310, 51))
+        self.result_line.setGeometry(QtCore.QRect(4, 5, 312, 51))
         self.result_line.setStyleSheet("font: 12pt \"Lucida Console\";")
         self.result_line.setObjectName("result_line")
 
@@ -120,6 +120,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle('Calculator')
         MainWindow.setWindowIcon(QtGui.QIcon('image/logo.jpg'))
 
+        self.zero.setText(_translate("MainWindow", "0"))
         self.one.setText(_translate("MainWindow", "1"))
         self.two.setText(_translate("MainWindow", "2"))
         self.three.setText(_translate("MainWindow", "3"))
@@ -129,7 +130,6 @@ class Ui_MainWindow(object):
         self.seven.setText(_translate("MainWindow", "7"))
         self.eight.setText(_translate("MainWindow", "8"))
         self.nine.setText(_translate("MainWindow", "9"))
-        self.zero.setText(_translate("MainWindow", "0"))
 
         self.addition.setText(_translate("MainWindow", "+"))
         self.subtraction.setText(_translate("MainWindow", "-"))

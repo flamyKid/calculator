@@ -15,10 +15,6 @@ class MainWin(QtWidgets.QMainWindow):
         self.operation = None
         self.text = ''
 
-        # если не удалять, то будет баг
-        self.delete_all()
-
-        # функции вывода чисел
         self.ui.zero.clicked.connect(lambda: self.numbers('0'))
         self.ui.one.clicked.connect(lambda: self.numbers('1'))
         self.ui.two.clicked.connect(lambda: self.numbers('2'))
@@ -30,7 +26,6 @@ class MainWin(QtWidgets.QMainWindow):
         self.ui.eight.clicked.connect(lambda: self.numbers('8'))
         self.ui.nine.clicked.connect(lambda: self.numbers('9'))
 
-        # функции операций
         self.ui.addition.clicked.connect(lambda: self.addiction())
         self.ui.subtraction.clicked.connect(lambda: self.subtraction())
         self.ui.multiply.clicked.connect(lambda: self.multiply())
@@ -39,7 +34,6 @@ class MainWin(QtWidgets.QMainWindow):
         self.ui.power.clicked.connect(lambda: self.power())
         self.ui.factorial.clicked.connect(lambda: self.factorial())
 
-        # другие функции
         self.ui.num_sign.clicked.connect(lambda: self.num_sign())
         self.ui.point.clicked.connect(lambda: self.point())
         self.ui.delete_last.clicked.connect(lambda: self.delete_last())
@@ -100,15 +94,6 @@ class MainWin(QtWidgets.QMainWindow):
         self.text += '!'
         self.ui.result_line.setText(self.text)
 
-    def rad(self, num1, num2):
-        return str(math.sqrt(float(num2)))
-
-    def pow(self, num1, num2):
-        return str(math.pow(float(num1), float(num2)))
-
-    def fac(self, num1, num2):
-        return str(math.factorial(float(num1)))
-
     def add(self, num1, num2):
         return str(float(num1) + float(num2))
 
@@ -120,6 +105,15 @@ class MainWin(QtWidgets.QMainWindow):
 
     def div(self, num1, num2):
         return str(float(num1) / float(num2))
+
+    def rad(self, num1, num2):
+        return str(math.sqrt(float(num2)))
+
+    def pow(self, num1, num2):
+        return str(math.pow(float(num1), float(num2)))
+
+    def fac(self, num1, num2):
+        return str(math.factorial(float(num1)))
 
     def num_sign(self):
         self.text_list.append('-')
