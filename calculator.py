@@ -40,6 +40,27 @@ class MainWin(QtWidgets.QMainWindow):
         self.ui.delete_all.clicked.connect(lambda: self.delete_all())
         self.ui.result.clicked.connect(lambda: self.print_result())
 
+    def add(self, num1, num2):
+        return str(float(num1) + float(num2))
+
+    def sub(self, num1, num2):
+        return str(float(num1) - float(num2))
+
+    def mul(self, num1, num2):
+        return str(float(num1) * float(num2))
+
+    def div(self, num1, num2):
+        return str(float(num1) / float(num2))
+
+    def rad(self, num1, num2):
+        return str(math.sqrt(float(num2)))
+
+    def pow(self, num1, num2):
+        return str(math.pow(float(num1), float(num2)))
+
+    def fac(self, num1, num2):
+        return str(math.factorial(float(num1)))
+
     def numbers(self, num):
         self.text_list.append(str(num))
         self.text += str(num)
@@ -93,27 +114,6 @@ class MainWin(QtWidgets.QMainWindow):
         self.text_list.append('!')
         self.text += '!'
         self.ui.result_line.setText(self.text)
-
-    def add(self, num1, num2):
-        return str(float(num1) + float(num2))
-
-    def sub(self, num1, num2):
-        return str(float(num1) - float(num2))
-
-    def mul(self, num1, num2):
-        return str(float(num1) * float(num2))
-
-    def div(self, num1, num2):
-        return str(float(num1) / float(num2))
-
-    def rad(self, num1, num2):
-        return str(math.sqrt(float(num2)))
-
-    def pow(self, num1, num2):
-        return str(math.pow(float(num1), float(num2)))
-
-    def fac(self, num1, num2):
-        return str(math.factorial(float(num1)))
 
     def num_sign(self):
         self.text_list.append('-')
